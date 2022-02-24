@@ -1,0 +1,23 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "[!p]*/**": true,
+        "p[!r]*/**": true,
+        "pr[!o]*/**": true,
+        "pro[!j]*/**": true,
+        "proj[!e]*/**": true,
+        "proje[!t]*/**": true,
+        "projet[!o]*/**": true,
+        "projeto[!a]*/**": true,
+        "projetoa[!g]*/**": true,
+        "projetoag[!e]*/**": true,
+        "projetoage[!n]*/**": true,
+        "projetoagen[!d]*/**": true,
+        "projetoagend[!a]*/**": true
+    }
+}

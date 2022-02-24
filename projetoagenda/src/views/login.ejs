@@ -1,0 +1,46 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+     <div class="container">
+         <div class="row">  
+             <div class="col-lg-2"></div>
+
+             <div class="col-lg-8 my-3">
+                 <h1 class="text-center">Criar conta ou entrar</h1>
+                 <p class="text-center lead">Faça Login ou Crie sua Conta abaixo</p>
+
+                 <%- include('includes/messages') %>
+
+                    <div class="row">
+                        <div class="col-lg">
+                            <h4>Faça seu Login</h4>
+                            <p>Se voce ja tem uma conta, faça seu login abaixo: </p>
+                            <form action='/login/login' method="post">
+                                <div class="mb-3">
+                                    
+                                  <label for="exampleInputEmail1" class="form-label">Endereço de Email</label>
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="exampleInputPassword1" class="form-label">Senha</label>
+                                  <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                                </div>
+                               
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                                <a href="/login/register" style="margin-left: 30px;">Criar Conta</a>
+                              </form>
+                        </div>
+
+                    </div>
+             </div>
+             
+
+             <div class="col-lg-2"></div>
+
+         </div>
+     </div>
+
+<%- include('includes/foot') %>
+
+
+
