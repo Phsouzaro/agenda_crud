@@ -12,15 +12,35 @@
                 <%- include('includes/messages') %>
 
                 <div class="responsive-table">
+                    <% if(contatos.length > 0) { %>
                     <table class="table my-3">
-                        <tr>
-                            <td>Luiz</td>
-                            <td>Otavio</td>
-                            <td>email@email.com</td>
-                            <td>62995707702</td>
-                        </tr>
+                        <th>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Sobrenome</td>
+                                <td>Email</td>
+                                <td>Telefone</td>
+                            </tr>
+                        </th>
+                        <tbody>
+                            <% for(contato of contatos ) {%>
+                            <tr>
+                                <td><%= contato.nome %></td>
+                                <td><%= contato.sobrenome %></td>
+                                <td><%= contato.email %></td>
+                                <td><%= contato.telefone %></td>
+                                <td><a href="/contatos/index/<%= contato._id %>">Editar</a></td>
+                                <td><a class='text-danger' href="/contatos/delete/<%= contato._id %>">Excluir</a></td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                        
                         
                     </table>
+                    <% }else{ %>
+                        <h1 class='text-center text-danger'>Você nao tem contatos para exibir</h1>
+                        <p class="text-center text-danger">Tente cadastrar um novo contato</p>
+                        <% } %>
                 </div>
              </div>
              

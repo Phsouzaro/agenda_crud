@@ -1,0 +1,63 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+     <div class="container">
+         <div class="row">  
+             <div class="col-lg-2"></div>
+
+             <div class="col-lg-8 my-3">
+                 <h1 class="text-center">Contatos</h1>
+                 <p class="text-center lead">Crie ou edite seu contato abaixo</p>
+
+                <%- include('includes/messages') %>
+
+                <div class="row">
+                    <div class="col-lg">
+                        <h4>Faça seu Login</h4>
+                        <p>Se voce ja tem uma conta, faça seu login abaixo: </p>
+                        <% if(contato._id) {%>
+                          <form action='/contatos/edit/<%= contato._id %>' method="post">
+                        <% }else{%>
+                          <form action='/contatos/register' method="post">
+                          <% }%>
+
+                            <div class="mb-3">
+                                
+                              <label for="exampleInputEmail1" class="form-label">Nome:</label>
+                              <input  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nome" value=<%= contato.nome%>>
+                            </div>
+                            <div class="mb-3">
+                                
+                                <label for="exampleInputEmail1" class="form-label">Sobrenome:</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="sobrenome" value=<%= contato.sobrenome%>>
+                              </div>
+                              <div class="mb-3">
+                                
+                                <label for="exampleInputEmail1" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value=<%= contato.email%>>
+                              </div>
+                              <div class="mb-3">
+                                
+                                <label for="exampleInputEmail1" class="form-label">Telefone:</label>
+                                <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="telefone" value=<%= contato.telefone%>>
+                              </div>
+                          
+                           
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                            <a href="/login/register" style="margin-left: 30px;">Criar Conta</a>
+                          </form>
+                    </div>
+                </div>
+                
+             </div>
+             
+
+             <div class="col-lg-2"></div>
+
+         </div>
+     </div>
+
+<%- include('includes/foot') %>
+
+
+
